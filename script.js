@@ -403,4 +403,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ── Chatbot Widget ──
+  const chatbotWidget = document.getElementById('chatbotWidget');
+  const chatbotToggle = document.getElementById('chatbotToggle');
+  const chatbotClose = document.getElementById('chatbotClose');
+  const chatbotIcon = document.getElementById('chatbotIcon');
+
+  chatbotToggle.addEventListener('click', () => {
+    chatbotWidget.classList.toggle('open');
+    chatbotIcon.textContent = chatbotWidget.classList.contains('open') ? '✕' : '💬';
+  });
+
+  chatbotClose.addEventListener('click', () => {
+    chatbotWidget.classList.remove('open');
+    chatbotIcon.textContent = '💬';
+  });
+
 });
